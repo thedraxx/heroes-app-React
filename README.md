@@ -25,6 +25,12 @@ react-router: 6
 bootstrap: 5.2
 ```
 
+## 🖤 AnimateCSS
+
+```
+AnimateCSS: 4
+```
+
 ## 🔮 Futuro del Proyecto
 
 En proceso...

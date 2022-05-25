@@ -2,6 +2,7 @@ import React, { useMemo } from 'react'
 import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import { getHeroById } from '../selectors/getHeroById';
 
+
 export const HeroScreen = () => {
 
   // recibe el id del heroe que fue enviado desde el componente HeroCard gracias a useParams
@@ -29,15 +30,15 @@ export const HeroScreen = () => {
   }
 
   return (
-    <div className='row mt-5'>
-      <div className='col-4'>
+    <div className='row mt-5 animate__animated animate__bounceInLeft'>
+      <div className='col-4 ' >
         <img
           src={imgPath}
           alt={hero.superhero}
           className="img-thumbnail"
         />
       </div>
-      <div className='col-8'>
+      <div className='col-8 animate__animated animate__bounceInRight'>
         <h3>{hero.superhero}</h3>
         <ul className='list-group list-group-flush'>
           <li className='list-group-item'>
