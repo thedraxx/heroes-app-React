@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import { getHeroById } from '../selectors/getHeroById';
 
 export const HeroScreen = () => {
 
-  // recibe el id del heroe gracias a useParams
+  // recibe el id del heroe que fue enviado desde el componente HeroCard gracias a useParams
   const { heroeId } = useParams();
 
-  //Encuentra el heroe gracias al id que recibe
-  const hero = getHeroById(heroeId);
+  //Encuentra el heroe gracias al id que recibe, se agrego el useMemo para que solo se ejecute cuando el id cambie
+  const hero = useMemo(() => getHeroById(heroeId), [heroeId]);
 
   //Si no encuentra un heroe, Navigate lo redirigue a la pantalla principal
   if (!hero) {
