@@ -31,6 +31,12 @@ bootstrap: 5.2
 AnimateCSS: 4
 ```
 
+## 🖤 QueryString
+
+```
+QueryString: 7.1.1
+```
+
 ## 🔮 Futuro del Proyecto
 
 En proceso...

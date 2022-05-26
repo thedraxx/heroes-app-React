@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 import { HeroCard } from '../hero/HeroCard';
@@ -26,8 +26,10 @@ export const SearchScreen = () => {
     navigate(`?q=${searchText}`);
   }
 
-  // Envia al componente getHeroesByName el valor de searchText y busca los heroes que sean iguales a searchText
-  const heroesFiltered = getHeroesByName(searchText);
+  // Envia al componente getHeroesByName el valor de q y busca los heroes que coincidan con el nombre
+  // se usa useMemo para que no se vuelva a ejecutar la funcion getHeroesByName si no se cambia el valor de q
+  // q cambia cuando hacemos click en el boton buscar
+  const heroesFiltered = useMemo(() => getHeroesByName(q), [q]);
 
   return (
     <>
@@ -57,6 +59,15 @@ export const SearchScreen = () => {
         <div className='col-7'>
           <h4>Results</h4>
           <hr />
+
+          {
+            (q === '')
+              ? <div className='alert alert-info'> Search a Hero</div>
+              : (heroesFiltered.length === 0)
+              && <div className='alert alert-danger'> There are no results {q} </div>
+          }
+
+
           {
             heroesFiltered.map(hero => (
               //Lo enviamos a HeroCard para que renderize el heroe que se busco
