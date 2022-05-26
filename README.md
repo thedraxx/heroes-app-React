@@ -25,7 +25,7 @@ react-router: 6
 bootstrap: 5.2
 ```
 
-## 🖤 AnimateCSS
+## 🤍 AnimateCSS
 
 ```
 AnimateCSS: 4
