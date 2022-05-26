@@ -1,18 +1,33 @@
 import React from 'react'
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
+import { HeroCard } from '../hero/HeroCard';
+import { getHeroesByName } from '../selectors/getHeroByName';
+import queryString from 'query-string';
 
 export const SearchScreen = () => {
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // usamos query string para obtener el parametro de la url, ?q="nombreSuperheroe"
+  const { q = '' } = queryString.parse(location.search);
+
   const [formValues, handleInputChange] = useForm({
-    searchText: '',
-  })
+    //SearchText va a obtenr el valor del input gracias a la url y si no existe lo pone vacio
+    searchText: q,
+  });
 
   const { searchText } = formValues;
 
   const handleSearch = (e) => {
     e.preventDefault();
-    console.log(searchText)
+    //Gracias al navigate, lo que hace es redireccionar a la url con el parametro q,que contiene el nombre del superheroe
+    navigate(`?q=${searchText}`);
   }
+
+  // Envia al componente getHeroesByName el valor de searchText y busca los heroes que sean iguales a searchText
+  const heroesFiltered = getHeroesByName(searchText);
 
   return (
     <>
@@ -38,6 +53,19 @@ export const SearchScreen = () => {
               Search...
             </button>
           </form>
+        </div>
+        <div className='col-7'>
+          <h4>Results</h4>
+          <hr />
+          {
+            heroesFiltered.map(hero => (
+              //Lo enviamos a HeroCard para que renderize el heroe que se busco
+              <HeroCard
+                key={hero.id}
+                hero={hero}
+              />
+            ))
+          }
         </div>
       </div>
     </>
