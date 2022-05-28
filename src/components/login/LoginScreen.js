@@ -10,13 +10,18 @@ export const LoginScreen = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
+
+    // Busca en localstorage la ultima pagina visitada, si la encuentra te redirige sino te manda al home
+    const lastPath = localStorage.getItem('lastPath') || '/';
+
+    //Dispatch para que el componente AuthContext sepa que se ha hecho login
     const action = {
       type: types.login,
       payload: { name: 'fernando', }
     }
     dispatch(action);
 
-    navigate('/', {
+    navigate(lastPath, {
       replace: true
     });
   }

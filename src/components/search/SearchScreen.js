@@ -13,12 +13,16 @@ export const SearchScreen = () => {
   // usamos query string para obtener el parametro de la url, ?q="nombreSuperheroe"
   const { q = '' } = queryString.parse(location.search);
 
+  //Guarda la busqueda actual en localstorage
+  localStorage.setItem('lastPath', `/search?q=${q}`);
+
   const [formValues, handleInputChange] = useForm({
     //SearchText va a obtenr el valor del input gracias a la url y si no existe lo pone vacio
     searchText: q,
   });
 
   const { searchText } = formValues;
+
 
   const handleSearch = (e) => {
     e.preventDefault();
