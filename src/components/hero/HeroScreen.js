@@ -1,8 +1,7 @@
 import React, { useMemo } from 'react'
 import { useParams, Navigate, useNavigate } from 'react-router-dom'
+import { heroesImages } from '../../helpers/heroImages';
 import { getHeroById } from '../selectors/getHeroById';
-
-export const heroesImages = require.context('../../assets', true);
 
 export const HeroScreen = () => {
 

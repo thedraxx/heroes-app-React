@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { heroesImages } from './HeroScreen';
+import { heroesImages } from '../../helpers/heroImages';
 
 export const HeroCard = ({ hero }) => {
     // const imagesPath = `/assets/${hero.id}.jpg`;
