@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { heroesImages } from './HeroScreen';
 
 export const HeroCard = ({ hero }) => {
-    const imagesPath = `/assets/${hero.id}.jpg`;
-
+    // const imagesPath = `/assets/${hero.id}.jpg`;
     return (
         <div className='col animate__animated animate__fadeIn'>
             <div className='card'>
                 <div className='row no-gutters'>
                     <div className='col-4'>
                         <img
-                            src={imagesPath}
+                            src={heroesImages(`./${hero.id}.jpg`)}
                             className="card-img"
                             alt={hero.superhero}
                         />
