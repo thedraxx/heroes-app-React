@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "3cf86a2e44e01b53f8ad",
+    "revision": "105c683b5dc906243744",
     "url": "/heroes-app-React/static/css/main.38688c56.chunk.css"
   },
   {
-    "revision": "3cf86a2e44e01b53f8ad",
-    "url": "/heroes-app-React/static/js/main.3cf86a2e.chunk.js"
+    "revision": "105c683b5dc906243744",
+    "url": "/heroes-app-React/static/js/main.105c683b.chunk.js"
   },
   {
     "revision": "6d901b3e33806cc9ca52",
@@ -100,7 +100,7 @@ self.__precacheManifest = [
     "url": "/heroes-app-React/static/media/marvel-wolverine.a1a41d9a.jpg"
   },
   {
-    "revision": "d5b5904f270b3308a5de84f79b887cb5",
+    "revision": "984d2c4cd6f10ee827ee64b9d65a6d4b",
     "url": "/heroes-app-React/index.html"
   }
 ];

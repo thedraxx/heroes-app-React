@@ -1,7 +1,7 @@
 {
   "main.css": "/heroes-app-React/static/css/main.38688c56.chunk.css",
-  "main.js": "/heroes-app-React/static/js/main.3cf86a2e.chunk.js",
-  "main.js.map": "/heroes-app-React/static/js/main.3cf86a2e.chunk.js.map",
+  "main.js": "/heroes-app-React/static/js/main.105c683b.chunk.js",
+  "main.js.map": "/heroes-app-React/static/js/main.105c683b.chunk.js.map",
   "static/js/1.6d901b3e.chunk.js": "/heroes-app-React/static/js/1.6d901b3e.chunk.js",
   "static/js/1.6d901b3e.chunk.js.map": "/heroes-app-React/static/js/1.6d901b3e.chunk.js.map",
   "static/js/2.3badb205.chunk.js": "/heroes-app-React/static/js/2.3badb205.chunk.js",
@@ -30,6 +30,6 @@
   "static/media/marvel-wolverine.jpg": "/heroes-app-React/static/media/marvel-wolverine.a1a41d9a.jpg",
   "static/css/main.38688c56.chunk.css.map": "/heroes-app-React/static/css/main.38688c56.chunk.css.map",
   "index.html": "/heroes-app-React/index.html",
-  "precache-manifest.66bd8b75a47333aeb8890c34b39883ef.js": "/heroes-app-React/precache-manifest.66bd8b75a47333aeb8890c34b39883ef.js",
+  "precache-manifest.84294ff2c8db514b6fb79ddda104bf02.js": "/heroes-app-React/precache-manifest.84294ff2c8db514b6fb79ddda104bf02.js",
   "service-worker.js": "/heroes-app-React/service-worker.js"
 }
